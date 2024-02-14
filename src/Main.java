@@ -1,15 +1,26 @@
+/**
+ * Name: Shehzar Aurangzeb Abbasi
+ * ID: 40291795
+ * COMP249
+ * Assignment #1
+ * Due Date: 16th February 2024
+ */
+import Controller.GameController.GameController;
+import Model.grid.Grid;
+import View.GameView.GameView;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Create a new game grid with a size of 8x8
+        Grid gameGrid = new Grid(8);
+        // Create a new game view, passing the game grid to it
+        GameView gameView = new GameView(gameGrid);
+        // Create a new game controller, passing both the game grid and game view to it
+        GameController gameController = new GameController(gameGrid, gameView);
+        //start the game
+        gameController.startGame();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
     }
 }
