@@ -9,8 +9,6 @@ import Controller.GameController.GameController;
 import Model.grid.Grid;
 import View.GameView.GameView;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         // Create a new game grid with a size of 8x8
